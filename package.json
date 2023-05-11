@@ -1,0 +1,37 @@
+{
+  "name": "rdstation-teste",
+  "version": "1.0.0",
+  "description": "Desafio tech da RD Station para a vaga de Engenheira de Software",
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephleao/rdstation-teste-2023"
+  },
+  "author": "Stephanne Leão",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.17",
+    "ionicons": "^7.1.0",
+    "swiper": "^9.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "bourbon": "^7.0.0",
+    "browser-sync": "^2.27.5",
+    "cssnano": "^5.0.8",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.3.8",
+    "sass": "^1.42.1",
+    "webpack": "^5.54.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

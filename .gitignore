@@ -121,6 +121,9 @@ GitHub.sublime-settings
 # Ignora pasta para guardar arquivos do projeto que não quer que seja commitado
 _arquivos
 _ignorar
+js
+css
 
 ### WhiteList ###
 # Caso seja necessário, liste os arquivos e pastas que não devem ser ignorados
+!src/js
