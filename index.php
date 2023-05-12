@@ -17,6 +17,8 @@
 <body>
   <a href="#main" class="visually-hidden-focusable">Saltar para o conteúdo</a>
 
+  <?php include 'template-parts/header.php'; ?>
+
   <main id="main"></main>
 
   <script type="module" src="/node_modules/ionicons/dist/ionicons/ionicons.esm.js"></script>
