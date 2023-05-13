@@ -21,9 +21,15 @@
 
   <main id="main">
     <?php
-      include 'template-parts/section-hero.php';
-      include 'template-parts/section-results-list.php';
+    include 'template-parts/section-hero.php';
+    include 'template-parts/section-results-list.php';
     ?>
+
+    <div class="container">
+      <?php
+      include 'template-parts/section-benefits.php';
+      ?>
+    </div>
   </main>
 
   <script type="module" src="/node_modules/ionicons/dist/ionicons/ionicons.esm.js"></script>
