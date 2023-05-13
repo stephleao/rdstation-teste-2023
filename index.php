@@ -20,8 +20,10 @@
   <?php include 'template-parts/header.php'; ?>
 
   <main id="main">
-    <?php include 'template-parts/section-hero.php'; ?>
-
+    <?php
+      include 'template-parts/section-hero.php';
+      include 'template-parts/section-results-list.php';
+    ?>
   </main>
 
   <script type="module" src="/node_modules/ionicons/dist/ionicons/ionicons.esm.js"></script>
