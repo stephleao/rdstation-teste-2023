@@ -19,7 +19,10 @@
 
   <?php include 'template-parts/header.php'; ?>
 
-  <main id="main"></main>
+  <main id="main">
+    <?php include 'template-parts/section-hero.php'; ?>
+
+  </main>
 
   <script type="module" src="/node_modules/ionicons/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="/node_modules/ionicons/dist/ionicons/ionicons.js"></script>
