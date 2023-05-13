@@ -31,6 +31,10 @@
       include 'template-parts/section-cta.php';
       ?>
     </div>
+
+    <?php
+    include 'template-parts/section-demo.php';
+    ?>
   </main>
 
   <script type="module" src="/node_modules/ionicons/dist/ionicons/ionicons.esm.js"></script>
