@@ -28,6 +28,7 @@
     <div class="container">
       <?php
       include 'template-parts/section-benefits.php';
+      include 'template-parts/section-cta.php';
       ?>
     </div>
   </main>
