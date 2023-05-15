@@ -25,7 +25,7 @@
         // o botao do leitor de tela.
         ?>
         <a class="thumb-cover" href="https://www.youtube.com/watch?v=lGCesaaLi4s" title="Clique para ver o vídeo">
-          <img src="/images/img-video-thumbnail.jpg" alt="Prévia do vídeo">
+          <img src="/images/img-video-thumbnail.jpg" width="649" height="365" alt=" Prévia do vídeo">
 
           <div class="thumb-cover-caption" aria-hidden="true">
             <ion-icon class="i-play" name="play"></ion-icon>

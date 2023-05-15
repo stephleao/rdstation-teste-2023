@@ -22,7 +22,7 @@
       </div>
 
       <div class="col">
-        <img src="/images/img-results.jpg" alt="Mulher escrevendo resultados no vidro">
+        <img src="/images/img-results.jpg" width="600" height="600" alt="Mulher escrevendo resultados no vidro">
       </div>
     </div>
   </div>
