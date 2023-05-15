@@ -1,0 +1,47 @@
+/**
+ * VARIABLES LOOP FIX
+ * O Sass modular nao permite que dois modulos / arquivos sejam co-dependentes,
+ * como pode acontecer com functions que utilizam variaveis existentes. Inclua
+ * as variaveis que causam esse problema aqui.
+ */
+
+@use "sass:color";
+
+$red: #dc3545 !default;
+$yellow: #F2BF4E !default;
+$teal: #19C1CE !default;
+$gray-dark: #212429 !default;
+$teal-dark: #0b485b !default;
+
+$white: #fff;
+$gray-100: #F1F3F5 !default;
+$gray-200: #CFD3D8 !default;
+$gray-300: #97A1AC !default;
+$gray-400: #7E8A98 !default;
+$gray-500: $gray-dark !default;
+$black: #000;
+
+$colors: (
+  "red":        $red,
+  "yellow":     $yellow,
+  "teal":       $teal,
+  "black":      $black,
+  "white":      $white,
+  "gray-dark":  $gray-500,
+  "teal-dark":  $teal-dark
+);
+
+$primary:       $teal !default;
+$primary-dark:  $teal-dark !default;
+$secondary:     $gray-400 !default;
+$highlight:     $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+
+$theme-colors: (
+  "primary": $primary,
+  "primary-dark": $primary-dark,
+  "secondary": $secondary,
+  "highlight": $highlight,
+  "light": $light,
+);

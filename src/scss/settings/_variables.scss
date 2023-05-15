@@ -3,6 +3,99 @@
  */
 
 @use "sass:color";
+@use "variables-loop-fix" as *;
+@forward "variables-loop-fix";
+@import "../../node_modules/bootstrap/scss/functions";
 
-$default-font-family: 'Nunito Sans', sans-serif;
-$heading-font-family: 'Darker Grotesque', sans-serif;
+$font-weight-black: 900 !default;
+
+$link-btn-hover: '&:focus, &:hover' !default;
+$link-btn-active: '&:active, &.active' !default;
+$link-btn-focus: '&:focus, &.focus' !default;
+
+$scaleup-base: scale(1.05) !default;
+$scaleup-lg: scale(1.15) !default;
+$moveup-base: translateY(-.25rem) !default;
+
+$default-font-family: 'Nunito Sans', sans-serif !default;
+$heading-font-family: 'Darker Grotesque', sans-serif !default;
+
+// # Variaveis sobrescritas do Bootstrap
+
+// Options
+$enable-dark-mode:            false;
+
+// Spacing
+$spacer: 1rem !default;
+
+// Body
+$body-color:                $gray-500;
+$body-bg:                   $white !default;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1248px
+);
+
+// Components
+$box-shadow:                  0 .5rem 1rem rgba($gray-500, .16);
+$box-shadow-sm:               0 .125rem .75rem rgba($gray-500, .14);
+
+// Typography
+$font-family-sans-serif:      $default-font-family;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          800;
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.2;
+$h1-font-size:                $font-size-base * 3.5;
+$h2-font-size:                $font-size-base * 2.5;
+$h3-font-size:                $font-size-base * 2;
+$headings-margin-bottom:      $spacer * 1.5 ;
+$headings-font-family:        $heading-font-family;
+$headings-font-weight:        900;
+$headings-line-height:        1.1;
+$lead-font-weight:            400;
+
+// Buttons + Forms
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         .75rem !default;
+$input-btn-font-size:         .875rem;
+$input-btn-border-width:      0.125rem;
+
+// Buttons
+$btn-font-weight:             800;
+
+$btn-border-radius:           0;
+$btn-border-radius-sm:        0;
+$btn-border-radius-lg:        0;
+
+// Forms
+$form-label-font-weight:                700;
+$form-label-color:                      $black;
+
+$input-border-radius:                   0;
+$input-border-radius-sm:                0;
+$input-border-radius-lg:                0;
+
+// Cards
+$card-spacer-y:                     $spacer * 1.5;
+$card-spacer-x:                     $spacer * 1.5;
+$card-border-radius:                0;
+
+@import "../../node_modules/bootstrap/scss/variables";
