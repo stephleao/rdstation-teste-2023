@@ -17,7 +17,28 @@
 <body>
   <a href="#main" class="visually-hidden-focusable">Saltar para o conteúdo</a>
 
-  <main id="main"></main>
+  <?php include 'template-parts/header.php'; ?>
+
+  <main id="main">
+    <?php
+    include 'template-parts/section-hero.php';
+    include 'template-parts/section-results-list.php';
+    ?>
+
+    <div class="container">
+      <?php
+      include 'template-parts/section-benefits.php';
+      include 'template-parts/section-cta.php';
+      ?>
+    </div>
+
+    <?php
+    include 'template-parts/section-demo.php';
+    include 'template-parts/section-integrations.php';
+    ?>
+  </main>
+
+  <?php include 'template-parts/footer.php'; ?>
 
   <script type="module" src="/node_modules/ionicons/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="/node_modules/ionicons/dist/ionicons/ionicons.js"></script>
