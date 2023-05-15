@@ -38,6 +38,8 @@
     ?>
   </main>
 
+  <?php include 'template-parts/footer.php'; ?>
+
   <script type="module" src="/node_modules/ionicons/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="/node_modules/ionicons/dist/ionicons/ionicons.js"></script>
   <script src="/js/main.bundle.js"></script>
