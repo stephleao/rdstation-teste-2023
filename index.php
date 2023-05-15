@@ -34,6 +34,7 @@
 
     <?php
     include 'template-parts/section-demo.php';
+    include 'template-parts/section-integrations.php';
     ?>
   </main>
 
