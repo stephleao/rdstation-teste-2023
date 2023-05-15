@@ -1,0 +1,8 @@
+// PLACEHOLDERS
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use 'variables' as *;
+
+%transition-base {
+  transition: $transition-base;
+}
