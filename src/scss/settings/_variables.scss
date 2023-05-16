@@ -82,7 +82,7 @@ $btn-font-weight:             800;
 $btn-border-radius:           0;
 $btn-border-radius-sm:        0;
 $btn-border-radius-lg:        0;
-
+$btn-font-size-lg:            $font-size-base;
 
 $btn-hover-bg-shade-amount:       20%;
 $btn-hover-bg-tint-amount:        20%;
@@ -93,10 +93,12 @@ $btn-active-border-tint-amount:   20%;
 // Forms
 $form-label-font-weight:                700;
 $form-label-color:                      $black;
-
+$input-border-color:                    $black;
 $input-border-radius:                   0;
 $input-border-radius-sm:                0;
 $input-border-radius-lg:                0;
+$input-focus-border-color:              $black;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$gray-500}'/></svg>") !default;
 
 // Cards
 $card-spacer-y:                     $spacer * 1.5;

@@ -25,6 +25,12 @@
   }
 }
 
+// Form
+.form-control,
+.form-select {
+  box-shadow: inset .25rem .25rem 0 rgba($gray-100, .5);
+}
+
 // Bgs
 
 @each $name, $color in $theme-colors {
