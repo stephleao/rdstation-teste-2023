@@ -30,3 +30,14 @@ ion-icon {
     height: 32px;
   }
 }
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $gray-100;
+  @include font-size(2rem);
+  @include bb.size(rfs-fluid-value(4rem));
+  @include bb.margin(null null $spacer);
+}
