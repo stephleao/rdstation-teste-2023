@@ -1,0 +1,47 @@
+// OVERRIDES: BS BUTTONS
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+@mixin btn-detail($height, $angle, $translateY, $opacity: 1, $color: $black) {
+  transform: translateY($translateY);
+  opacity: $opacity;
+  @include bb.border-style(solid solid null);
+  @include bb.border-width($height $angle null);
+  @include bb.border-color($color transparent null);
+}
+
+$detail-pos-bottom: $input-btn-padding-y * .93;
+$detail-height: $spacer * .25;
+$detail-angle: $spacer * .5;
+
+.btn {
+  &:not(.btn-link) {
+    @extend %transition-base;
+    text-transform: uppercase;
+    @include bb.position(relative, null);
+
+    &::after {
+      @extend %transition-base;
+      content: "";
+      display: block;
+      width: 100%;
+      z-index: -1;
+      @include bb.position(absolute, null 0 ($detail-pos-bottom * -1) null);
+      @include btn-detail($detail-height, $detail-angle, 0);
+    }
+
+    &:focus {
+      transform: translateY($detail-pos-bottom);
+
+      &::after {
+        @include btn-detail(0, 0, ($detail-pos-bottom * -1), 0);
+      }
+    }
+  }
+
+  &-secondary {
+    --bs-btn-bg: transparent;
+    @include button-outline-variant($black, $black, rgba($black, .16), $black, $black);
+  }
+}
