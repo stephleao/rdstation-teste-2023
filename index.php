@@ -25,7 +25,7 @@
     include 'template-parts/section-results-list.php';
     ?>
 
-    <div class="container">
+    <div class="container section-wrapper">
       <?php
       include 'template-parts/section-benefits.php';
       include 'template-parts/section-cta.php';
