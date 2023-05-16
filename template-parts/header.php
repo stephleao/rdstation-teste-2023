@@ -61,7 +61,7 @@
 
       <div class="">
         <a class="btn btn-secondary" href="#">Botão</a>
-        <a class="btn btn-primary" href="#">Botão <ion-icon class="" src="/images/icons/i-arrow-forward.svg" aria-hidden="true"></ion-icon></a>
+        <a class="btn btn-primary" href="#">Botão <ion-icon class="i-arrow-right" src="/images/icons/i-arrow-forward.svg" aria-hidden="true"></ion-icon></a>
       </div>
     </div>
   </nav>

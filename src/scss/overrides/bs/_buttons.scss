@@ -17,12 +17,12 @@ $detail-angle: $spacer * .5;
 
 .btn {
   &:not(.btn-link) {
-    @extend %transition-base;
+    transition: $transition-base;
     text-transform: uppercase;
     @include bb.position(relative, null);
 
     &::after {
-      @extend %transition-base;
+      transition: $transition-base;
       content: "";
       display: block;
       width: 100%;
@@ -37,6 +37,19 @@ $detail-angle: $spacer * .5;
       &::after {
         @include btn-detail(0, 0, ($detail-pos-bottom * -1), 0);
       }
+    }
+  }
+
+  [class*="i-arrow"] {
+    transition: $transition-base;
+    font-size: 1.25rem;
+    vertical-align: text-bottom;
+  }
+
+  #{$link-btn-hover} {
+    [class*="i-arrow"] {
+      $translate-x-default: translateX(map-get($spacers, 1));
+      transform: $translate-x-default;
     }
   }
 
