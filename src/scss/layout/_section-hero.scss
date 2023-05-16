@@ -1,0 +1,22 @@
+// LAYOUT: SECTION HERO
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+
+@use "settings" as *;
+
+.section-hero {
+  @include bb.position (relative, null);
+
+  > [class*="container"] {
+    @include bb.position (relative, null);
+    z-index: 1;
+  }
+
+  @include media-breakpoint-up(md) {
+    .column-back {
+      z-index: 0;
+      @include bb.position(absolute, null 0 (map-get($spacers, 5) * 3.5) 0);
+      @include bb.margin (auto);
+    }
+  }
+}

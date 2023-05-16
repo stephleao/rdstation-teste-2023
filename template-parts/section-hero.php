@@ -5,7 +5,7 @@
  */
 ?>
 
-<section class="section-hero">
+<section class="section-hero section-wrapper bg-light">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -90,14 +90,16 @@
           </form>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="col">
-        <div class="row">
-          <div class="col">
-            <h2 class="">Estaremos juntos desde o primeiro passo!</h2>
-            <p>Se você ainda não sabe como extrair o máximo das ações digitais, não tem problema. O <strong>RD Station Marketing</strong> é mais que uma ferramenta, nos importamos com os seus resultados.</p>
-            <p><strong>Estaremos com você do planejamento até a prática!</strong></p>
-          </div>
+  <div class="column-back section-wrapper bg-primary-dark mt-5 mt-md-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h2 class="h3">Estaremos juntos desde o primeiro passo!</h2>
+          <p>Se você ainda não sabe como extrair o máximo das ações digitais, não tem problema. O <strong>RD Station Marketing</strong> é mais que uma ferramenta, nos importamos com os seus resultados.</p>
+          <p><strong>Estaremos com você do planejamento até a prática!</strong></p>
         </div>
       </div>
     </div>
