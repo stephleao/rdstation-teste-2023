@@ -1,0 +1,45 @@
+// FOOTER
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+
+@use 'settings' as *;
+
+.footer {
+  text-align: center;
+  background-color: $primary;
+  @include padding(($spacer * 1.5) null ($spacer * 2.5) null);
+
+  .brand {
+    display: inline-block;
+  }
+
+  .copyright {
+    font-size: $font-size-sm;
+    border-top: 1px solid rgba($white, .5);
+    @include bb.margin(.8rem null null);
+    @include bb.padding(map-get($spacers, 4) null null);
+
+    a {
+      color: inherit;
+
+      #{$link-btn-hover} {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+
+    p {
+      @extend %no-margin-last-el;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    & {
+      @include bb.padding(($spacer * 1.8) null map-get($spacers, 4));
+
+      .copyright {
+        text-align: right;
+      }
+    }
+  }
+}

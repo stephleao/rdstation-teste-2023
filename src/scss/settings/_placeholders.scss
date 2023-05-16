@@ -14,3 +14,10 @@
 %moveup-base {
   transform: $moveup-base;
 }
+
+%no-margin-last-el {
+  &:last-child,
+  &:only-child {
+    @include bb.margin(null null 0);
+  }
+}
