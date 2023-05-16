@@ -16,3 +16,17 @@ ion-icon {
     pointer-events: none;
   }
 }
+
+.brand {
+  @extend .navbar-brand;
+  transition: $transition-base;
+
+  #{$link-btn-hover} {
+    @extend %scaleup-base;
+  }
+
+  &-rdstation {
+    width: 174px;
+    height: 32px;
+  }
+}
