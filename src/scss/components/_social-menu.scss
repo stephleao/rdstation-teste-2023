@@ -1,0 +1,25 @@
+// COMPONENT: SOCIAL MENU
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+.social-menu {
+  ion-icon {
+    font-size: $h4-font-size;
+    vertical-align: middle;
+    transition: $transition-base;
+  }
+
+  .nav-link {
+    color: $body-color;
+    @include bb.padding(.7rem);
+
+    #{$link-btn-hover} {
+      color: $black;
+
+      ion-icon {
+        @extend %moveup-base;
+      }
+    }
+  }
+}
