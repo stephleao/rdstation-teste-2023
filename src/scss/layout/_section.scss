@@ -15,3 +15,43 @@
     }
   }
 }
+
+
+// Bgs para sections
+
+.section-graphics-01 {
+  $img-width: 1102px;
+  $img-width-sm: $img-width * .5;
+  $img-pos: $img-width * -.37;
+  $img-pos-sm: $img-width-sm * -.42;
+  @include bb.position (relative, null);
+
+  &::before,
+  &::after {
+    z-index: 0;
+    content: '';
+    @include bb.position (absolute, 0);
+
+    background: {
+      image: url('../../images/graphics.svg');
+      repeat: no-repeat;
+      size: $img-width-sm auto;
+      position: left $img-pos-sm top ($img-width-sm * .06);
+    }
+    @include media-breakpoint-up(md) {
+      background: {
+        size: $img-width auto;
+        position: left $img-pos top 45%;
+      }
+    }
+  }
+
+  &::after {
+    transform: scale(-1);
+  }
+
+  > [class*='container'] {
+    z-index: 1;
+    @include bb.position (inherit, null);
+  }
+}
