@@ -1,0 +1,12 @@
+/**
+ * OVERRIDES: BOOTSTRAP
+ */
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+// Cards
+
+.card {
+  box-shadow: $box-shadow-sm;
+}
