@@ -22,21 +22,21 @@
             </div>
 
             <form id="lead-form">
-              <div class="">
-                <label for="lead-nome">Diga, qual seu nome?</label>
-                <input type="text" class="" id="lead-nome" name="lead-nome" placeholder="Insira seu nome" minlength="3" maxlength="48" required>
+              <div class="mb-3">
+                <label class="form-label" for="lead-nome">Diga, qual seu nome?</label>
+                <input type="text" class="form-control" id="lead-nome" name="lead-nome" placeholder="Insira seu nome" minlength="3" maxlength="48" required>
               </div>
-              <div class="">
-                <label for="lead-email">Seu email de trabalho</label>
-                <input type="email" class="" id="lead-email" name="lead-email" placeholder="Insira seu email" minlengh="11" maxlengh="48" required>
+              <div class="mb-3">
+                <label class="form-label" for="lead-email">Seu email de trabalho</label>
+                <input type="email" class="form-control" id="lead-email" name="lead-email" placeholder="Insira seu email" minlengh="11" maxlengh="48" required>
               </div>
-              <div class="">
-                <label for="lead-tel">Seu telefone</label>
-                <input type="tel" class="" id="lead-tel" name="lead-tel" placeholder="Insira seu número de telefone com DDD" pattern="^\([1-9]{2}\) (?:[2-5]|9\d)\d{3}-\d{4}$" minlength="14" maxlength="15" required>
+              <div class="mb-3">
+                <label class="form-label" for="lead-tel">Seu telefone</label>
+                <input type="tel" class="form-control" id="lead-tel" name="lead-tel" placeholder="Insira seu número de telefone com DDD" pattern="^\([1-9]{2}\) (?:[2-5]|9\d)\d{3}-\d{4}$" minlength="14" maxlength="15" required>
               </div>
-              <div class="">
-                <label for="lead-cargo">Seu cargo de ocupação</label>
-                <select class="" required>
+              <div class="mb-3">
+                <label class="form-label" for="lead-cargo">Seu cargo de ocupação</label>
+                <select class="form-select" required>
                   <option selected>Selecione seu cargo</option>
                   <option value="Sócio(a) / CEO / Proprietário(a)">Sócio(a) / CEO / Proprietário(a)</option>
                   <option value="Diretor(a) de Vendas">Diretor(a) de Vendas</option>
@@ -53,42 +53,42 @@
                   <option value="Outros cargos">Outros cargos</option>
                 </select>
               </div>
-              <div class="">
-                <label for="lead-senha">Crie uma senha</label>
-                <input type="password" class="" id="lead-senha" name="lead-senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,10}$" minlength="6" maxlength="10" required>
+              <div class="mb-3">
+                <label class="form-label" for="lead-senha">Crie uma senha</label>
+                <input type="password" class="form-control" id="lead-senha" name="lead-senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,10}$" minlength="6" maxlength="10" required>
               </div>
-              <div class="">
-                <label for="lead-check-senha">Confirme sua senha</label>
-                <input type="password" class="" id="lead-check-senha" name="lead-check-senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,10}$" minlength="6" maxlength="10" required>
+              <div class="mb-3">
+                <label class="form-label" for="lead-check-senha">Confirme sua senha</label>
+                <input type="password" class="form-control" id="lead-check-senha" name="lead-check-senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,10}$" minlength="6" maxlength="10" required>
               </div>
-              <div class="">
-                <div>Qual o site da sua empresa?</div>
+              <div class="mb-3">
+                <div class="form-label mb-3">Qual o site da sua empresa?</div>
                 <?php
                 // Entendo o proposito de ter um radio para justamente testar a pessoa que esta desenvolvendo.
                 // Mas se fosse algo real, seria muito mais simples este campo nao ser obrigatorio, em vez de
                 // obrigar o usuario preencher um campo sem um valor de fato. Quanto menos campos o usuario
                 // tiver que preencher, mais ele tende a terminar e submeter o form.
                 ?>
-                <div class="form-check">
-                  <input class="" type="radio" name="lead-site-opcoes" id="lead-opcao-tenho-site">
-                  <label for="lead-opcao-tenho-site">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="lead-site-opcoes" id="lead-opcao-tenho-site">
+                  <label class="form-check-label" for="lead-opcao-tenho-site">
                     Meu site é
                   </label>
                 </div>
-                <input type="url" class="" id="lead-site" name="lead-site" placeholder="Insira o endereço do site" minlengh="5" maxlengh="48">
-                <div class="form-check">
-                  <input class="" type="radio" name="lead-site-opcoes" id="lead-opcao-sem-site">
-                  <label for="lead-opcao-sem-site">
+                <input type="url" class="form-control mb-3" id="lead-site" name="lead-site" placeholder="Insira o endereço do site" minlengh="5" maxlengh="48">
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="radio" name="lead-site-opcoes" id="lead-opcao-sem-site">
+                  <label class="form-check-label" for="lead-opcao-sem-site">
                     Ainda não tenho um site
                   </label>
                 </div>
               </div>
-              <ul>
-                <li>Ao criar minha conta, estou de acordo com os <a href="https://legal.rdstation.com/pt-BR/rdstation-services-agreement/">termos de uso</a> do software e <a href="https://legal.rdstation.com/pt/privacy-policy/">política de privacidade</a>.</li>
+              <ul class="text-muted small ps-3 mb-4">
+                <li>Ao criar minha conta, estou de acordo com os <a href="https://legal.rdstation.com/pt-BR/rdstation-services-agreement/" target="_blank" rel="noopener">termos de uso</a> do software e <a href="https://legal.rdstation.com/pt/privacy-policy/" target="_blank" rel="noopener">política de privacidade</a>.</li>
                 <li>Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.</li>
                 <li>* Você pode alterar suas permissões de comunicação a qualquer tempo.</li>
               </ul>
-              <button type="submit" class="btn btn-primary">Criar minha conta</button>
+              <button type="submit" class="btn btn-highlight btn-lg w-100">Criar minha conta</button>
             </form>
           </div>
         </div>
