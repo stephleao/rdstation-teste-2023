@@ -105,4 +105,9 @@ $card-border-radius:                0;
 $card-border-color:                 transparent;
 
 
+// padding vertical padrao para containers, sections, articles, etc
+$section-padding: $spacer * 2.5;
+$section-padding-big: $section-padding * 1.5;
+
+
 @import "../../node_modules/bootstrap/scss/variables";

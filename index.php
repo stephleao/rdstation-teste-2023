@@ -19,7 +19,7 @@
 
   <?php include 'template-parts/header.php'; ?>
 
-  <main id="main">
+  <main id="main" class="section-wrapper pt-0">
     <?php
     include 'template-parts/section-hero.php';
     include 'template-parts/section-results-list.php';

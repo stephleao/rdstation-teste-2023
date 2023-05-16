@@ -1,0 +1,17 @@
+// LAYOUT: SECTION
+// Estilo padrao para blocos / secoes
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+.section {
+  &-wrapper { // padding vertical
+    @include bb.padding($section-padding null);
+  }
+
+  @include media-breakpoint-up(md) {
+    &-wrapper {
+      @include bb.padding($section-padding-big null);
+    }
+  }
+}
