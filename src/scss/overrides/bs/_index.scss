@@ -5,6 +5,13 @@
 @use "../../node_modules/bourbon/core/bourbon" as bb;
 @use "settings" as *;
 
+// Typography
+@include media-breakpoint-down(sm) {
+  .lead {
+    font-size: $font-size-base;
+  }
+}
+
 // Cards
 
 .card {
