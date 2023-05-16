@@ -11,6 +11,10 @@
   transform: $scaleup-base;
 }
 
+%scaleup-lg {
+  transform: $scaleup-lg;
+}
+
 %moveup-base {
   transform: $moveup-base;
 }
