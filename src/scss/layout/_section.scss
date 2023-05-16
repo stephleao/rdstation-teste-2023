@@ -8,7 +8,6 @@
   &-wrapper { // padding vertical
     @include bb.padding($section-padding null);
   }
-
   @include media-breakpoint-up(md) {
     &-wrapper {
       @include bb.padding($section-padding-big null);
@@ -19,39 +18,77 @@
 
 // Bgs para sections
 
-.section-graphics-01 {
-  $img-width: 1102px;
-  $img-width-sm: $img-width * .5;
-  $img-pos: $img-width * -.37;
-  $img-pos-sm: $img-width-sm * -.42;
-  @include bb.position (relative, null);
+.section-graphics {
+  &-01 {
+    $img-width: 1102px;
+    $img-width-sm: $img-width * .5;
+    $img-pos: $img-width * -.37;
+    $img-pos-sm: $img-width-sm * -.42;
+    @include bb.position(relative, null);
 
-  &::before,
-  &::after {
-    z-index: 0;
-    content: '';
-    @include bb.position (absolute, 0);
+    &::before,
+    &::after {
+      z-index: 0;
+      content: '';
+      @include bb.position(absolute, 0);
 
-    background: {
-      image: url('../../images/graphics.svg');
-      repeat: no-repeat;
-      size: $img-width-sm auto;
-      position: left $img-pos-sm top ($img-width-sm * .06);
-    }
-    @include media-breakpoint-up(md) {
       background: {
-        size: $img-width auto;
-        position: left $img-pos top 45%;
+        image: url('../../images/graphics.svg');
+        repeat: no-repeat;
+        size: $img-width-sm auto;
+        position: left $img-pos-sm top ($img-width-sm * .06);
+      }
+      @include media-breakpoint-up(md) {
+        background: {
+          size: $img-width auto;
+          position: left $img-pos top 45%;
+        }
       }
     }
+
+    &::after {
+      transform: scale(-1);
+    }
+
+    > [class*='container'] {
+      z-index: 1;
+      @include bb.position(inherit, null);
+    }
   }
 
-  &::after {
-    transform: scale(-1);
-  }
+  &-02 {
+    overflow: hidden;
 
-  > [class*='container'] {
-    z-index: 1;
-    @include bb.position (inherit, null);
+    [class*='container'] {
+      @include bb.position(relative, null);
+
+      &::before {
+        content: '';
+        background-color: $gray-100;
+        z-index: -1;
+        @include bb.size(150%, 87%);
+        @include bb.position(absolute, ($section-padding * -1) -25% null);
+        @include bb.margin(auto);
+      }
+    }
+    $position-list: left, right;
+
+    @each $position in $position-list {
+      &-#{$position} {
+        @extend .section-graphics-02;
+
+        [class*='container'] {
+          &::before {
+            @include media-breakpoint-up(md) {
+              top: 0;
+              bottom: 0;
+              #{$position}: auto;
+              $position: if($position == 'left', right, left);
+              #{$position}: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
