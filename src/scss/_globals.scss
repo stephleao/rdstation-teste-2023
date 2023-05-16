@@ -1,0 +1,18 @@
+/**
+ * GLOBAlS: ESTILOS / EXTENDS GLOBAIS
+ */
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+a {
+  @extend %transition-base;
+}
+
+ion-icon {
+  vertical-align: middle;
+
+  &[name] {
+    pointer-events: none;
+  }
+}
