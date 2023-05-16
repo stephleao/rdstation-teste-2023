@@ -12,10 +12,17 @@
   }
 }
 
+
 // Cards
 
 .card {
   box-shadow: $box-shadow-sm;
+
+  @at-root {
+    [class*="col"] > & {
+      height: 100%;
+    }
+  }
 }
 
 // Bgs

@@ -38,21 +38,22 @@ $content_list = array(
 )
 ?>
 
-<section class="section-benefits">
+<section class="section-benefits section-wrapper">
   <div class="row">
-    <div class="col">
-      <h1>A ferramenta de Automação de Marketing líder na América Latina</h1>
+    <div class="col-12 col-md-6 mb-md-5">
+      <h1 class="h2">A ferramenta de Automação de Marketing líder na América Latina</h1>
     </div>
+    <div class="w-100"></div>
 
     <?php foreach ($content_list as $content) : ?>
 
-      <div class="col">
+      <div class="col-12 col-md-4 mb-4">
         <div class="card">
           <div class="card-body">
-            <div class="">
-              <ion-icon class="" src="/images/icons/<?= $content['icon']; ?>.svg" aria-hidden="true"></ion-icon>
+            <div class="icon-wrapper text-primary">
+              <ion-icon src="/images/icons/<?= $content['icon']; ?>.svg" aria-hidden="true"></ion-icon>
             </div>
-            <h2 class=""><?= $content['title']; ?></h2>
+            <h2 class="h3"><?= $content['title']; ?></h2>
             <p><?= $content['text']; ?></p>
           </div>
         </div>
