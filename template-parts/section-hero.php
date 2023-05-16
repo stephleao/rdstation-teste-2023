@@ -7,11 +7,11 @@
 
 <section class="section-hero section-wrapper bg-light">
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1>Gere mais <span class="text-primary">oportunidades</span> para seu negócio</h1>
-        <p>O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.</p>
-      </div>
+    <div class="row justify-content-between">
+      <header class="column-text col-12 col-md-6 pt-md-4 mt-xl-5">
+        <h1 class="pb-md-3">Gere mais <span class="text-primary">oportunidades</span> para seu negócio</h1>
+        <p class="lead">O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.</p>
+      </header>
 
       <div class="column-form col-12 col-md-5">
         <div class="card">
