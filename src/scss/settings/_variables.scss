@@ -104,6 +104,13 @@ $form-check-radio-checked-bg-image: url("data:image/svg+xml, <svg xmlns='http://
 // Navbar
 $navbar-padding-y:                  $spacer;
 
+
+// Dropdowns
+$dropdown-border-color: transparent;
+$dropdown-border-radius: 0;
+$dropdown-header-color: $primary;
+
+
 // Cards
 $card-spacer-y:                     $spacer * 1.5;
 $card-spacer-x:                     $spacer * 1.5;
