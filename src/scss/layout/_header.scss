@@ -3,6 +3,34 @@
 @use "../../node_modules/bourbon/core/bourbon" as bb;
 @use "settings" as *;
 
+.main-nav {
+  @include bb.padding(map-get($spacers, 4) null);
+
+  .nav-item {
+    font-weight: $font-weight-bolder;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray-200;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .nav-link {
+      @include bb.padding (($nav-link-padding-y * 1.5) null);
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    & {
+      @include bb.padding (0 null);
+    }
+
+    .nav-item {
+      &:not(:last-child) {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
 .secondary-nav {
   display: flex;
   justify-content: center;
