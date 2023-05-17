@@ -7,6 +7,7 @@
   background-color: $white;
   border-bottom: 1px solid $gray-200;
   z-index: $zindex-fixed;
+  overflow: hidden;
   @include bb.position (sticky, 0 null);
 
   .navbar-toggler,
@@ -22,6 +23,9 @@
 
   .navbar-toggler {
     border: 0;
+  }
+  @include media-breakpoint-up(lg) {
+    overflow: visible;
   }
 }
 
@@ -56,25 +60,16 @@
 .secondary-nav {
   display: flex;
   justify-content: center;
-  @include bb.padding(map-get($spacers, 4) null);
-  @include bb.position (relative, null);
-
-  &::before {
-    content: '';
-    background-color: $gray-100;
-    border-top: 1px solid $gray-200;
-    height: calc(100% + $navbar-padding-y);
-    @include bb.position (absolute, 0 ($grid-gutter-width * -.5) null);
-  }
+  background-color: $gray-100;
+  border-top: 1px solid $gray-200;
+  @include bb.padding(map-get($spacers, 4) ($container-padding-x * 5));
+  @include bb.margin (null ($container-padding-x * -5) ($navbar-padding-y * -1));
   @include media-breakpoint-up(lg) {
     & {
       background-color: transparent;
       border-top: 0;
-      @include bb.padding (0 null);
-
-      &::before {
-        display: none;
-      }
+      @include bb.padding (0);
+      @include bb.margin (0);
     }
   }
 }
