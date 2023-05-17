@@ -1,0 +1,64 @@
+// COMPONENT: BTN MENU
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+$_line-rotate: 45deg;
+$_line-pos01: -.719rem;
+$_line-pos02: $_line-pos01 * -.5;
+
+$_close-icon: (('r': $_line-rotate * -1, 'x': $_line-pos01, 'y': $_line-pos02),
+  ('r': $_line-rotate, 'x': $_line-pos02, 'y': $_line-pos01),
+);
+
+$_i-menu: 'i-menu';
+
+.#{$_i-menu} {
+  &-wrapper {
+    display: inline-flex;
+    vertical-align: middle;
+    contain: strict;
+    fill: currentcolor;
+    box-sizing: content-box;
+    transition: $transition-base;
+    @include bb.size(1em);
+  }
+
+  &-line {
+    @extend %transition-base;
+  }
+
+  @each $icon in $_close-icon {
+    &-close0#{index($_close-icon, $icon)} {
+      @extend %transition-base;
+    }
+  }
+
+  @at-root {
+    .header-navbar &-wrapper {
+      font-size: 1.5rem;
+    }
+
+    .navbar-toggler {
+      #{$link-btn-hover} {
+        .#{$_i-menu}-wrapper {
+          @extend %scaleup-base;
+        }
+      }
+
+      &.active {
+        .#{$_i-menu}-line {
+          opacity: 0;
+        }
+
+        @each $icon in $_close-icon {
+          $i: index($_close-icon, $icon);
+
+          .#{$_i-menu}-close0#{$i} {
+            transform: rotate(map-get($icon, 'r')) translate3d(map-get($icon, 'x'), map-get($icon, 'y'), 0);
+          }
+        }
+      }
+    }
+  }
+}

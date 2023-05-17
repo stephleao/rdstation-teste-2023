@@ -13,7 +13,14 @@
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-wrapper" aria-controls="main-menu-wrapper" aria-expanded="false" aria-label="Abrir menu">
-      <ion-icon name="menu" aria-hidden="true"></ion-icon>
+      <div class="i-menu-wrapper">
+        <svg class="i-menu" viewBox=" 0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="i-menu-line" x=".75" y="3.75" width="21.5" height="1.5" rx=".75" fill="currentColor" stroke="currentColor" stroke-width=".5" />
+          <rect class="i-menu-close01" x=".75" y="10.75" width="21.5" height="1.5" rx=".75" fill="currentColor" stroke="currentColor" stroke-width=".5" />
+          <rect class="i-menu-close02" x=".75" y="10.75" width="21.5" height="1.5" rx=".75" fill="currentColor" stroke="currentColor" stroke-width=".5" />
+          <rect class="i-menu-line" x=".75" y="17.75" width="21.5" height="1.5" rx=".75" fill="currentColor" stroke="currentColor" stroke-width=".5" />
+        </svg>
+      </div>
     </button>
 
     <div id="main-menu-wrapper" class="collapse navbar-collapse justify-content-end">
