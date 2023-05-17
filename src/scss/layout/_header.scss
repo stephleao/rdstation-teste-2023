@@ -3,6 +3,28 @@
 @use "../../node_modules/bourbon/core/bourbon" as bb;
 @use "settings" as *;
 
+.header-navbar {
+  background-color: $white;
+  border-bottom: 1px solid $gray-200;
+  z-index: $zindex-fixed;
+  @include bb.position (sticky, 0 null);
+
+  .navbar-toggler,
+  .nav-link,
+  .btn-link {
+    color: inherit;
+
+    #{$link-btn-hover},
+    #{$link-btn-active} {
+      color: $link-color;
+    }
+  }
+
+  .navbar-toggler {
+    border: 0;
+  }
+}
+
 .main-nav {
   @include bb.padding(map-get($spacers, 4) null);
 
