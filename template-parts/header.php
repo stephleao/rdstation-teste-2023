@@ -26,28 +26,28 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
-          <div class="dropdown-menu">
-            <div class="row">
+          <div class="dropdown-menu mega-dropdown-menu">
+            <div class="row g-0">
               <div class="col-12 col-lg-4">
                 <div class="dropdown-header">Metodologia</div>
-                <ul>
-                  <li><a class="dropdown-item" href="#">Tudo sobre Inbound Marketing</a></li>
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#">Tudo sobre Inbound Marketing</a></li>
                 </ul>
               </div>
               <div class="col-12 col-lg-4">
                 <div class="dropdown-header">Cursos</div>
-                <ul>
-                  <li><a class="dropdown-item" href="#">RD University</a></li>
-                  <li><a class="dropdown-item" href="#">Introdução ao Inbound Marketing</a></li>
-                  <li><a class="dropdown-item" href="#">RD Station Marketing Basic</a></li>
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#">RD University</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Introdução ao Inbound Marketing</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">RD Station Marketing Basic</a></li>
                 </ul>
               </div>
               <div class="col-12 col-lg-4">
                 <div class="dropdown-header">Ferramentas</div>
-                <ul>
-                  <li><a class="dropdown-item" href="#">Avalie seu funil de vendas</a></li>
-                  <li><a class="dropdown-item" href="#">Compare suas métricas de Email Marketing</a></li>
-                  <li><a class="dropdown-item" href="#">Calcule o ROI do RD Station Marketing</a></li>
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#">Avalie seu funil de vendas</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Compare suas métricas de Email Marketing</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Calcule o ROI do RD Station Marketing</a></li>
                 </ul>
               </div>
             </div>
