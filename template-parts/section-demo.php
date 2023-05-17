@@ -13,7 +13,7 @@
 
         <?php // Este botao deve acionar o modal para assistir ao video... ou...
         ?>
-        <a class="btn btn-secondary" href="#" aria-hidden="true">Assista à demonstração <ion-icon class="i-arrow" name="play-circle"></ion-icon></a>
+        <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=lGCesaaLi4s" aria-hidden="true" data-fancybox>Assista à demonstração <ion-icon class="i-arrow" name="play-circle"></ion-icon></a>
       </div>
 
       <div class="col-12 col-md-7 col-lg-6 offset-lg-1">
@@ -24,7 +24,7 @@
         // um atras do outro. Seria melhor ter apenas o link da thumb/play. Por isso, preferi esconder
         // o botao do leitor de tela.
         ?>
-        <a class="thumb-cover" href="https://www.youtube.com/watch?v=lGCesaaLi4s" title="Clique para ver o vídeo">
+        <a class="thumb-cover" href="https://www.youtube.com/watch?v=lGCesaaLi4s" title="Clique para ver o vídeo" data-fancybox>
           <img class="thumb-cover-img" src="/images/img-video-thumbnail.jpg" width="649" height="365" alt=" Prévia do vídeo">
 
           <div class="thumb-cover-caption" aria-hidden="true">
