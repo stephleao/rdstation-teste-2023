@@ -10,7 +10,7 @@ a {
 }
 
 ion-icon {
-  vertical-align: middle;
+  vertical-align: -.125em;
 
   &[name] {
     pointer-events: none;
@@ -31,13 +31,22 @@ ion-icon {
   }
 }
 
+$icon-sizes: 2, 3;
+
 .icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   background-color: $gray-100;
-  @include font-size(2rem);
-  @include bb.size(rfs-fluid-value(4rem));
+  width: fit-content;
   @include bb.margin(null null $spacer);
+
+  @each $num in $icon-sizes {
+    &.icon-size-#{$num} {
+      @include font-size($num * 1rem);
+      @include padding($num * .5rem);
+    }
+  }
+
 }
