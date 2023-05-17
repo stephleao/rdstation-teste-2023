@@ -1,0 +1,30 @@
+// HEADER
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+.secondary-nav {
+  display: flex;
+  justify-content: center;
+  @include bb.padding(map-get($spacers, 4) null);
+  @include bb.position (relative, null);
+
+  &::before {
+    content: '';
+    background-color: $gray-100;
+    border-top: 1px solid $gray-200;
+    height: calc(100% + $navbar-padding-y);
+    @include bb.position (absolute, 0 ($grid-gutter-width * -.5) null);
+  }
+  @include media-breakpoint-up(lg) {
+    & {
+      background-color: transparent;
+      border-top: 0;
+      @include bb.padding (0 null);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

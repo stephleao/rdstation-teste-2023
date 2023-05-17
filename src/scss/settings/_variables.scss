@@ -100,6 +100,10 @@ $input-border-radius-lg:                0;
 $input-focus-border-color:              $black;
 $form-check-radio-checked-bg-image: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$gray-500}'/></svg>") !default;
 
+
+// Navbar
+$navbar-padding-y:                  $spacer;
+
 // Cards
 $card-spacer-y:                     $spacer * 1.5;
 $card-spacer-x:                     $spacer * 1.5;
