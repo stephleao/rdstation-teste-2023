@@ -32,9 +32,13 @@
 @import 'overrides/bs';
 @import 'overrides/bs/buttons';
 
+// Utilities
+@import 'utilities/animations';
+
 // Components
 @import 'components/social-menu';
 @import 'components/list-icon';
+@import 'components/thumb-cover';
 
 // Layout
 @import 'layout/section';
