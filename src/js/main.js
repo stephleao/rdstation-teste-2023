@@ -48,4 +48,9 @@ import Helpers from './Helpers';
       }
     }
   });
+
+  // Form
+
+  Helpers.formSetChecked(document.getElementById("lead-opcao-tenho-site"), document.getElementById('lead-site'));
+
 })();

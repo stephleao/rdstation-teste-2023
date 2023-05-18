@@ -34,4 +34,18 @@ export default class Helpers {
       });
     });
   }
+
+  /**
+   * Coloca foco no campo de texto ao clicar em um radio
+   * e marca o radio ao clicar no campo
+   */
+
+  static formSetChecked(inputRadio, inputText) {
+    inputRadio.addEventListener('click', function () {
+      inputText.focus();
+    });
+    inputText.addEventListener('click', function () {
+      inputRadio.checked = true;
+    });
+  }
 }
