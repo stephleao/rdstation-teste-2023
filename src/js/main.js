@@ -10,6 +10,9 @@ import fbxLangBR from './fancybox-br';
 // import Swiper
 import Swiper, { Pagination, Grid } from 'swiper';
 
+// import Pristine
+import Pristine from 'pristinejs';
+
 import Helpers from './Helpers';
 
 (function () {
@@ -52,5 +55,19 @@ import Helpers from './Helpers';
   // Form
 
   Helpers.formSetChecked(document.getElementById("lead-opcao-tenho-site"), document.getElementById('lead-site'));
+
+  let leadForm = document.getElementById("lead-form");
+  let pristine = new Pristine(leadForm);
+
+  leadForm.addEventListener('submit', function (e) {
+    let isValid = pristine.validate();
+
+    if (!isValid) {
+      e.preventDefault();
+      return false;
+    } else {
+
+    }
+  });
 
 })();

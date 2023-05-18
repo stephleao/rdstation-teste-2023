@@ -1,0 +1,17 @@
+// Pristine
+
+.text-help {
+  &.pristine-error {
+    @extend .invalid-feedback;
+  }
+}
+
+.has-danger {
+  .form-control, .form-select, .form-check {
+    @extend .is-invalid;
+  }
+
+  .form-check {
+    color: $danger;
+  }
+}
