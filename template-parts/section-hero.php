@@ -3,6 +3,54 @@
 /**
  * Template-part: Section Hero
  */
+
+// Funcao para pegar as mensagens de validacao do form
+// Pega uma mensagem especifica de acordo com a lista geral
+function get_messages($type_list, $general_list)
+{
+  $attr = '';
+
+  foreach ($type_list as $type) {
+
+    if (isset($general_list[$type])) {
+
+      if (is_array($general_list[$type])) {
+        foreach ($general_list[$type] as $type2 => $message) {
+          $attr .= 'data-pristine-' . $type2 . '-message="' . $message . '" ';
+        }
+      } else {
+        $attr .= 'data-pristine-' . $type . '-message="' . $general_list[$type] . '" ';
+      }
+    }
+  }
+
+  return $attr;
+}
+
+// Lista de mensagens de validacao
+$messages = array(
+  'required' => "Campo obrigatório.",
+  'email' => "Informe um email válido.",
+  'tel' => array(
+    'pattern' => "Precisa estar como (xx) xxxxx-xxxx.",
+    'minlength' => "O número precisa ser um telefone ou celular válido.",
+  ),
+  'password' => array(
+    'pattern' => "Precisa ter pelo menos uma letra maiúscula, uma minúscula e um número.",
+    'minlength' => "Precisa ter pelo menos 6 até 10 caracteres.",
+  ),
+  'match_password' => array(
+    'equals' => "A senha precisa ser igual nos dois campos.",
+    'minlength' => "Precisa ter pelo menos 6 até 10 caracteres.",
+  ),
+);
+
+// Grupos de mensagens de campos
+$email_message_group = array('required', 'email');
+$tel_message_group = array('required', 'tel');
+$password_message_group = array('required', 'password');
+$match_password_message_group = array('required', 'match_password');
+
 ?>
 
 <section class="section-hero section-wrapper bg-light">
@@ -25,19 +73,19 @@
               <form id="lead-form" class="lead-form">
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-nome">Diga, qual seu nome?</label>
-                  <input type="text" class="form-control" id="lead-nome" name="lead-nome" placeholder="Insira seu nome" maxlength="48" required>
+                  <input type="text" class="form-control" id="lead-nome" name="lead-nome" placeholder="Insira seu nome" maxlength="48" required data-pristine-required-message="<?= $messages['required']; ?>">
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-email">Seu email de trabalho</label>
-                  <input type="email" class="form-control" id="lead-email" name="lead-email" placeholder="Insira seu email" maxlengh="48" required>
+                  <input type="email" class="form-control" id="lead-email" name="lead-email" placeholder="Insira seu email" maxlengh="48" required <?= get_messages($email_message_group, $messages); ?>>
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-tel">Seu telefone</label>
-                  <input type="tel" class="form-control" id="lead-tel" name="lead-tel" placeholder="Insira seu número de telefone com DDD" minlength="14" maxlength="15" pattern="/^\([1-9]{2}\) (?:[2-5]|9\d)\d{3}-\d{4}$/" required>
+                  <input type="tel" class="form-control" id="lead-tel" name="lead-tel" placeholder="Insira seu número de telefone com DDD" minlength="14" maxlength="15" pattern="/^\([1-9]{2}\) (?:[2-5]|9\d)\d{3}-\d{4}$/" required <?= get_messages($tel_message_group, $messages); ?>>
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-cargo">Seu cargo de ocupação</label>
-                  <select class="form-select" required>
+                  <select class="form-select" required data-pristine-required-message="<?= $messages['required']; ?>">
                     <option value="" selected disabled>Selecione seu cargo</option>
                     <option value="Sócio(a) / CEO / Proprietário(a)">Sócio(a) / CEO / Proprietário(a)</option>
                     <option value="Diretor(a) de Vendas">Diretor(a) de Vendas</option>
@@ -56,11 +104,11 @@
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-senha">Crie uma senha</label>
-                  <input type="password" class="form-control" id="lead-senha" name="lead-senha" minlength="6" maxlength="10" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/" required autocomplete="off">
+                  <input type="password" class="form-control" id="lead-senha" name="lead-senha" minlength="6" maxlength="10" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/" required autocomplete="off" <?= get_messages($password_message_group, $messages); ?>>
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-confirma-senha">Confirme sua senha</label>
-                  <input type="password" class="form-control" id="lead-confirma-senha" name="lead-confirma-senha" maxlength="10" data-pristine-equals="#lead-senha" required autocomplete="off">
+                  <input type="password" class="form-control" id="lead-confirma-senha" name="lead-confirma-senha" maxlength="10" data-pristine-equals="#lead-senha" required autocomplete="off" <?= get_messages($match_password_message_group, $messages); ?>>
                 </div>
                 <div class="form-group mb-3">
                   <div class="form-label mb-3">Qual o site da sua empresa?</div>
@@ -71,14 +119,14 @@
                   // tiver que preencher, mais ele tende a terminar e submeter o form.
                   ?>
                   <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="lead-site-opcoes" id="lead-opcao-tenho-site" required>
+                    <input class="form-check-input" type="radio" name="lead-site-opcoes" id="lead-opcao-tenho-site" required data-pristine-required-message="<?= $messages['required']; ?>">
                     <label class="form-check-label" for="lead-opcao-tenho-site">
                       Meu site é
                     </label>
                   </div>
                   <input type="url" class="form-control mb-3" id="lead-site" name="lead-site" placeholder="Insira o endereço do site" minlengh="5" maxlengh="48">
                   <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="lead-site-opcoes" id="lead-opcao-sem-site" required>
+                    <input class="form-check-input" type="radio" name="lead-site-opcoes" id="lead-opcao-sem-site" required data-pristine-required-message="<?= $messages['required']; ?>">
                     <label class="form-check-label" for="lead-opcao-sem-site">
                       Ainda não tenho um site
                     </label>
