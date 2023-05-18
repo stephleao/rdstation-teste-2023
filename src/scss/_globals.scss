@@ -49,4 +49,7 @@ $icon-sizes: 2, 3;
     }
   }
 
+  ion-icon {
+    @extend %transition-base;
+  }
 }

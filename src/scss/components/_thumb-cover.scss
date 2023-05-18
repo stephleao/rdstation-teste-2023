@@ -30,10 +30,6 @@ $th-cover: '.thumb-cover';
   .icon-wrapper {
     background-color: $white;
     color: $body-color;
-
-    ion-icon {
-      @extend %transition-base;
-    }
   }
 
   .icon-pulse {
@@ -88,7 +84,7 @@ $th-cover: '.thumb-cover';
     a#{&} {
       #{$link-btn-hover} {
         .i-play {
-          transform: scale(1.1);
+          transform: $scaleup-lg;
         }
       }
     }

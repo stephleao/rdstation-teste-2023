@@ -40,6 +40,15 @@
 .card {
   box-shadow: $box-shadow-sm;
 
+  #{$link-btn-hover},
+  #{$link-btn-focus} {
+    .icon-wrapper {
+      ion-icon {
+        transform: $scaleup-lg;
+      }
+    }
+  }
+
   @at-root {
     [class*="col"] > & {
       height: 100%;
