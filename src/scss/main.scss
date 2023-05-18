@@ -28,6 +28,15 @@
 // docs: https://fancyapps.com/docs/ui/fancybox/
 @import "node_modules/@fancyapps/ui/dist/fancybox/fancybox";
 
+// Swiper
+// docs: https://swiperjs.com/api/
+@import "node_modules/swiper/swiper";
+@import "node_modules/swiper/modules/a11y/a11y";
+@import "node_modules/swiper/modules/controller/controller";
+@import "node_modules/swiper/modules/grid/grid";
+@import "node_modules/swiper/modules/manipulation/manipulation";
+@import "node_modules/swiper/modules/pagination/pagination";
+@import 'overrides/swiper'; // estilos sobrescritos do Swiper
 
 // CSS PROPRIO
 
@@ -46,6 +55,7 @@
 @import 'components/social-menu';
 @import 'components/list-icon';
 @import 'components/thumb-cover';
+@import 'components/slider';
 
 // Layout
 @import 'layout/section';

@@ -1,0 +1,32 @@
+/**
+ * OVERRIDES: SWIPER
+ */
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+$_bullet-size: 1rem;
+
+:root {
+  --swiper-pagination-bullet-size: #{$_bullet-size};
+  --swiper-pagination-bullet-width: #{$_bullet-size};
+  --swiper-pagination-bullet-height: #{$_bullet-size};
+  --swiper-pagination-bullet-inactive-color: #{$white};
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: .75rem;
+}
+
+// Paginacao
+.swiper-pagination {
+  justify-content: center;
+  @include bb.margin(map-get($spacers, 4) null null);
+  @include bb.position(static, null);
+
+  &-bullet {
+    border: 1px solid $gray-300;
+
+    &-active {
+      border-color: var(--swiper-theme-color);
+    }
+  }
+}

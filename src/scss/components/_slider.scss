@@ -1,0 +1,18 @@
+// COMPONENTS: SLIDER
+
+@use "../../node_modules/bourbon/core/bourbon" as bb;
+@use "settings" as *;
+
+.card-slider {
+  $shadow-size: .75rem;
+  @include bb.padding ($shadow-size);
+  @include bb.margin (($shadow-size * -1));
+
+  .swiper-slide {
+    height: auto;
+
+    > .card {
+      height: 100%;
+    }
+  }
+}
