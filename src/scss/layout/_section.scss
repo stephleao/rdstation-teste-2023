@@ -15,6 +15,64 @@
   }
 }
 
+%custom-bg-parent {
+  overflow-x: hidden;
+  @include bb.position (relative, null);
+
+  [class*="container"] {
+    z-index: 1;
+    @include bb.position (relative, null);
+  }
+}
+
+%custom-bg-element {
+  content: '';
+  z-index: 0;
+  background: {
+    size: 100% 100%;
+    repeat: no-repeat;
+  }
+}
+
+.section-hero {
+  @extend %custom-bg-parent;
+
+  &::before {
+    @extend %custom-bg-element;
+    background: {
+      image: url('../../images/graphics-triangle-white.svg');
+    }
+    transform: scaleX(-1.3);
+    @include bb.size (40vw, 40vw);
+    @include bb.position (absolute, 0 0 null null);
+  }
+
+  .column-back {
+    &::before {
+      @extend %custom-bg-element;
+      background: {
+        image: url('../../images/graphics-triangle-light-gray.svg');
+      }
+      @include bb.size (96px, 96px);
+      @include bb.position (absolute, 0 null null 0);
+    }
+  }
+}
+
+.section-results-list {
+  @extend %custom-bg-parent;
+
+  &::before {
+    @extend %custom-bg-element;
+    background: {
+      image: url('../../images/graphics-triangle-white.svg');
+    }
+    transform: scaleY(-1);
+    @include bb.size (40vw, 40vw);
+    @include bb.position (absolute, null null 0 0);
+  }
+}
+
 
 // Bgs para sections
 
