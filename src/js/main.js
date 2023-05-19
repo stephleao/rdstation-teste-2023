@@ -60,13 +60,26 @@ import Helpers from './Helpers';
   let pristine = new Pristine(leadForm);
 
   leadForm.addEventListener('submit', function (e) {
+    e.preventDefault();
     let isValid = pristine.validate();
 
-    if (!isValid) {
-      e.preventDefault();
-      return false;
-    } else {
+    if (isValid) {
+      let formData = new FormData(leadForm);
 
+      fetch(leadForm.action, {
+        method: leadForm.method,
+        body: formData
+      })
+        .then(response => {
+          if (response.ok) {
+            leadForm.reset();
+          } else {
+            throw new Error('Erro ao enviar o formulário.');
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
     }
   });
 

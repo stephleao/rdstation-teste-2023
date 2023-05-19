@@ -69,7 +69,11 @@ $match_password_message_group = array('required', 'match_password');
               <p class="text-muted mb-0">Não precisa cadastrar cartão de crédito. 😉</p>
             </div>
 
-            <form id="lead-form" class="lead-form">
+            <?php
+            // A url passada para o envio dos dados esta retornando erro "503 Service Unavailable",
+            // sendo assim, nao consegui testar o funcionamento completo do form.
+            ?>
+            <form id="lead-form" class="lead-form" method="post" action="https://rdstation-signup-psel.herokuapp.com/">
               <form id="lead-form" class="lead-form">
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-nome">Diga, qual seu nome?</label>
