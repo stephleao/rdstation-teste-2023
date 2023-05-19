@@ -47,6 +47,9 @@ export default class Helpers {
     inputText.addEventListener('click', function () {
       inputRadio.checked = true;
     });
+    inputText.addEventListener('focus', function () {
+      inputRadio.checked = true;
+    });
   }
 
   /**

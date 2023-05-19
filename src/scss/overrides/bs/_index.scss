@@ -65,7 +65,9 @@
 // Bgs
 
 @each $name, $color in $theme-colors {
-  .bg-#{$name} {
-    color: color-contrast($color);
+  @if($name != 'light') {
+    .bg-#{$name} {
+      color: color-contrast($color);
+    }
   }
 }
