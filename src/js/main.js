@@ -56,6 +56,12 @@ import Helpers from './Helpers';
 
   Helpers.formSetChecked(document.getElementById("lead-opcao-tenho-site"), document.getElementById('lead-site'));
 
+  let togglePasswordBtns = document.querySelectorAll('.password-toggle');
+
+  togglePasswordBtns.forEach(function (togglePasswordBtn) {
+    Helpers.togglePassword(togglePasswordBtn);
+  });
+
   let formMessage = document.querySelector('#form-message');
   let leadForm = document.getElementById("lead-form");
   let pristine = new Pristine(leadForm);
@@ -97,5 +103,4 @@ import Helpers from './Helpers';
         });
     }
   });
-
 })();

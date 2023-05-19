@@ -56,4 +56,25 @@ export default class Helpers {
     wrapper.innerHTML = `<div class="form-message-wrapper" role="alert"><div class="icon-wrapper icon-size-3 text-${messageAttrs.color}"><ion-icon name="${messageAttrs.icon}" aria-hidden="true"></ion-icon></div><h3 class="h3">${messageAttrs.title}</h3><p>${messageAttrs.text}</p></div>`;
   }
 
+  /**
+   * Mostra / esconde senha
+   */
+
+  static togglePassword(trigger) {
+    let input = trigger.previousElementSibling;
+    let iconEye = trigger.querySelector('[name="eye"]');
+    let iconEyeOff = trigger.querySelector('[name="eye-off"]');
+
+    trigger.addEventListener("click", function () {
+      if (input.type === "password") {
+        input.type = "text";
+        iconEye.classList.remove('d-none');
+        iconEyeOff.classList.add('d-none');
+      } else {
+        input.type = "password";
+        iconEye.classList.add('d-none');
+        iconEyeOff.classList.remove('d-none');
+      }
+    });
+  }
 }

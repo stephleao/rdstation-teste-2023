@@ -66,3 +66,24 @@ $icon-sizes: 2, 3;
     min-height: 100vh;
   }
 }
+
+.field-password {
+  @include bb.position(relative, null);
+
+  .form-control {
+    background-position: $form-select-feedback-icon-position;
+    background-size: $form-select-feedback-icon-size;
+    @include bb.padding(null $form-select-feedback-icon-padding-end null null);
+  }
+
+  .password-toggle {
+    font-size: 1.25rem;
+    line-height: 1;
+    color: $body-color;
+    @include bb.position(absolute, 0 0 0 null);
+
+    #{$link-btn-hover} {
+      color: $primary;
+    }
+  }
+}

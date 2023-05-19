@@ -110,7 +110,15 @@ $match_password_message_group = array('required', 'match_password');
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-senha">Crie uma senha</label>
-                  <input type="password" class="form-control" id="lead-senha" name="lead-senha" minlength="6" maxlength="10" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/" required autocomplete="off" <?= get_messages($password_message_group, $messages); ?>>
+
+                  <div class="field-password">
+                    <input type="password" class="form-control" id="lead-senha" name="lead-senha" minlength="6" maxlength="10" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}$/" required autocomplete="off" <?= get_messages($password_message_group, $messages); ?>>
+                    <button type="button" class="password-toggle btn btn-link show" aria-label="Mostrar senha">
+                      <ion-icon class="d-none" name="eye" aria-hidden="true"></ion-icon>
+                      <ion-icon name="eye-off" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
                 </div>
                 <div class="form-group mb-3">
                   <label class="form-label" for="lead-confirma-senha">Confirme sua senha</label>

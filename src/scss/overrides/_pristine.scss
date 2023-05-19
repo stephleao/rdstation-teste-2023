@@ -3,6 +3,12 @@
 .text-help {
   &.pristine-error {
     @extend .invalid-feedback;
+
+    @at-root {
+      .field-password ~ & {
+        display: block;
+      }
+    }
   }
 }
 
