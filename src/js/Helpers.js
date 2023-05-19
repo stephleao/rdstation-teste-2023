@@ -48,4 +48,12 @@ export default class Helpers {
       inputRadio.checked = true;
     });
   }
+
+  /**
+   * Funcao que retorna o template de mensagem do form
+   */
+  static appendFormMessage(wrapper, messageAttrs) {
+    wrapper.innerHTML = `<div class="form-message-wrapper" role="alert"><div class="icon-wrapper icon-size-3 text-${messageAttrs.color}"><ion-icon name="${messageAttrs.icon}" aria-hidden="true"></ion-icon></div><h3 class="h3">${messageAttrs.title}</h3><p>${messageAttrs.text}</p></div>`;
+  }
+
 }

@@ -56,7 +56,7 @@ $match_password_message_group = array('required', 'match_password');
 <section class="section-hero section-wrapper bg-light">
   <div class="container">
     <div class="row justify-content-between">
-      <header class="column-text col-12 col-md-6 pt-md-4 mt-xl-5">
+      <header class="column-text col-12 col-md-6 pb-3 pt-md-4 mt-xl-5">
         <h1 class="pb-md-3">Gere mais <span class="text-primary">oportunidades</span> para seu negócio</h1>
         <p class="lead">O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.</p>
       </header>
@@ -68,6 +68,8 @@ $match_password_message_group = array('required', 'match_password');
               <h2 class="h4 mb-3">Comece seus 10 dias de teste grátis do RD Station Marketing!</h2>
               <p class="text-muted mb-0">Não precisa cadastrar cartão de crédito. 😉</p>
             </div>
+
+            <div id="form-message"></div>
 
             <?php
             // A url passada para o envio dos dados esta retornando erro "503 Service Unavailable",

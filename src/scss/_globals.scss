@@ -53,3 +53,16 @@ $icon-sizes: 2, 3;
     @extend %transition-base;
   }
 }
+
+.form-message-wrapper {
+  text-align: center;
+  @include bb.padding(map-get($spacers, 5) null);
+
+  .icon-wrapper {
+    @include bb.margin(null auto);
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: 100vh;
+  }
+}

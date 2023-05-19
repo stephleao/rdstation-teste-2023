@@ -56,6 +56,7 @@ import Helpers from './Helpers';
 
   Helpers.formSetChecked(document.getElementById("lead-opcao-tenho-site"), document.getElementById('lead-site'));
 
+  let formMessage = document.querySelector('#form-message');
   let leadForm = document.getElementById("lead-form");
   let pristine = new Pristine(leadForm);
 
@@ -73,12 +74,26 @@ import Helpers from './Helpers';
         .then(response => {
           if (response.ok) {
             leadForm.reset();
+            leadForm.classList.add('d-none');
+            Helpers.appendFormMessage(formMessage, {
+              color: 'primary',
+              icon: 'paper-plane',
+              title: 'Obrigado!',
+              text: 'Logo entraremos em contato.'
+            });
           } else {
             throw new Error('Erro ao enviar o formulário.');
           }
         })
         .catch(error => {
           console.error(error);
+          leadForm.classList.add('d-none');
+          Helpers.appendFormMessage(formMessage, {
+            color: 'black',
+            icon: 'thunderstorm',
+            title: 'Desculpe',
+            text: 'Seus dados não puderam ser enviados no momento. Tente mais tarde.'
+          });
         });
     }
   });
